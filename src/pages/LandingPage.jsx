@@ -5,7 +5,7 @@ import Listings from '../components/Listings'
 
 const LandingPage = () => {
   return (
-    <div className='landingPage'>LandingPage
+    <div className='landingPage'>
         <BentoBox></BentoBox>
         <Listings></Listings>
     </div>

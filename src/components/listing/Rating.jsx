@@ -2,7 +2,7 @@ import React from 'react';
 
 const Rating = ({ ratingProp }) => {
   return (
-    <p>Rating: {ratingProp} / 5</p>
+    <p className='fw-bold text-dark'>Rating: {ratingProp} / 5</p>
   );
 };
 

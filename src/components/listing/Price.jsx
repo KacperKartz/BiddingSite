@@ -2,7 +2,7 @@ import React from 'react';
 
 const Price = ({ priceProp }) => {
   return (
-    <p>Price: ${priceProp}</p>
+    <p className="fw-bold ">Price: ${priceProp}</p>
   );
 };
 

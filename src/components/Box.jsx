@@ -23,6 +23,9 @@ const Box = ({num, text}) => {
         <div className="box-content">
             <h1 className="text-light box-text">{text}</h1>
             <img className="bento-img" src="https://placehold.co/100"></img>
+            <a className="text-white bentoButton">
+            <i className='bi bi-arrow-right-circle h3 m-1' ></i>
+            </a>
         </div>
     </div>
     </>
