@@ -5,6 +5,7 @@ import Price from './Price';
 import Image from './Image';
 import Category from './Category';
 import Rating from './Rating';
+import Button from './Button';
 
 const Listing = ({ title, description, price, image, category, rating }) => {
   // Check if product exists and has the necessary fields
@@ -27,6 +28,7 @@ const Listing = ({ title, description, price, image, category, rating }) => {
       <div className='listing-desc'>
       <Category categoryProp={category} />
         <Description descriptionProp={description} />
+        <Button></Button>
       </div>
     </div>
   );

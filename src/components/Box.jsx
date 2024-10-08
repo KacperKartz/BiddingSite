@@ -21,7 +21,8 @@ const Box = ({num, text}) => {
     <>
     <div className={`box box-${num}`} ref={boxRef} onMouseMove={handleMouseMove}>
         <div className="box-content">
-            <h1 className="text-light">{text}</h1>
+            <h1 className="text-light box-text">{text}</h1>
+            <img className="bento-img" src="https://placehold.co/100"></img>
         </div>
     </div>
     </>
