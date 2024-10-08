@@ -1,0 +1,205 @@
+
+html, body,main{
+  background-color: rgb(218, 236, 255);
+  height: 100vh;
+  margin: 0;
+  padding: 0px;
+  background: fixed linear-gradient(0deg, rgb(121, 140, 168) 0%, rgb(224, 239, 255) 75%) no-repeat;
+}
+
+
+.product-list{
+  display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-column-gap: 15px;
+grid-row-gap: 15px;
+filter: drop-shadow(0px 4px 3px #00000071);
+max-width: 800px;
+margin: auto;
+}
+
+.listing-item{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.listing-items{
+  cursor: pointer;
+}
+
+
+.image-over{
+  position: relative;
+  margin: auto;
+}
+
+.listing-items:hover .overlay-text{
+  transition: 300ms ease-in-out;
+  opacity: 0;
+}
+.listing-items:hover .card-img-top{
+  transition: 300ms ease-in-out;
+  opacity: 0;
+}
+
+
+
+.listing-items:hover .listing-desc{
+  transition: 300ms ease-in-out;
+  opacity: 1;
+}
+
+
+.listing-desc{
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  opacity: 0;
+}
+
+
+
+.overlay-text {
+
+  top: 0;
+  left: 0;
+  color: white;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.534) 0%, rgba(247,247,247,0) 95%);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  visibility: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+
+
+
+
+.BentoBox{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 3px;
+  max-width: 916px;
+  width: calc(100% = 20px);
+  margin: auto;
+
+}
+
+.box{
+  background-color: #ffb1dc;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  min-height: 150px;
+}
+
+.box-1{
+  grid-row: span 3 / span 3;
+}
+.box-2{
+  grid-column: span 3 / span 3;
+  grid-row: span 3 / span 3;
+}
+.box-3{
+  grid-row: span 5 / span 5;
+  grid-column-start: 5;
+}
+.box-4{
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+  grid-column-start: 3;
+  grid-row-start: 4;
+}
+.box-5{
+  grid-column: span 2 / span 2;
+  grid-row: span 2 / span 2;
+  grid-column-start: 1;
+  grid-row-start: 4;
+}
+
+
+
+.box:hover::before{
+  opacity: 1;
+}
+
+.box:hover::before > .box-border {
+  opacity: 1;
+}
+
+.box::before{
+  z-index: 3;
+  width: 100%;
+  top: 0px;
+  position: absolute;
+  left: 0px;
+  opacity: 0%;
+  transition: 500ms;
+  height: 100%;
+  content: "";
+  border-radius: inherit;
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y), 
+    rgba(255, 172, 244, 0.623), transparent 40%);
+}
+
+
+
+.box > .box-content {
+  background: linear-gradient(0deg, rgba(102,24,51,1) 2%, rgba(220,53,69,1) 74%);
+  border-radius: inherit;
+  margin: 1px;
+  height: calc(100% - 2px);
+  width: calc(100% - 2px);
+  z-index: 2;
+  position: relative;
+}
+
+.card-img-top{
+  max-width: 200px;
+  margin: auto;  
+  transition: 300ms ease-in-out;
+}
+
+
+
+@media (min-width: 992px) {
+  .container-lg, .container-md, .container-sm, .container {
+      max-width: 960px;
+  }
+  
+}
+
+@media (min-width: 768px) {
+  .container-md, .container-sm, .container {
+      max-width: 720px;
+  }
+
+
+}
+
+  @media (min-width: 576px) {
+    .container-sm, .container {
+        max-width: 540px;
+    }
+}
+
+@media (max-width: 500px) {
+  .product-list{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-text{
+    display: none;
+  }
+  
+}
